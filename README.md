@@ -8,12 +8,14 @@
 
 # Running
 
- $ yarn (for installing dependencies)
- $ yarn start (for running in dev mode)
+Simply run:
+
+- ```$ yarn``` (for installing dependencies)
+- ```$ yarn start``` (for running in dev mode)
 
 # Playing
 
-This game basically puts two characters to fight, based on their level and attributes. All attributes are open for changing, so you can see what happens. 
+This game basically puts two characters into a fight, and the fight will be based on their level + attributes. You are free for changing attributes and see what happens. 
 
 # About this app
 
