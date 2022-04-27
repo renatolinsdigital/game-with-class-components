@@ -2,6 +2,10 @@
 
  Fighting mini-game with open character's attributes. [Click here](https://dweeb-fight.herokuapp.com) to see the app running.
 
+ App print:
+
+ ![Print](print/app_print.png)
+
 # Running
 
  $ yarn (for installing dependencies)
