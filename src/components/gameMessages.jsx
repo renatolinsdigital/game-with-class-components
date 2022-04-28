@@ -13,7 +13,7 @@ class GameMessages extends Component {
     const { messages } = this.props.messages;
     return (
       <>
-        {messages.map((message, index) => <p key={index} className='message-entry'>{message}</p>)}
+        {messages?.map((message, index) => <p key={index} className='message-entry'>{message}</p>)}
       </>
     );
   }
