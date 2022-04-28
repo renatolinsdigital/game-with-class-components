@@ -4,7 +4,7 @@
 
  App print:
 
- ![Print](print/app_print.png)
+ ![Print](print/print.png)
 
 # Running
 
