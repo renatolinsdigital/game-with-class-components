@@ -19,7 +19,7 @@ This game basically puts two characters into a fight, and the fight will be base
 
 # About this app
 
- This application has several some coding pieces that are considered obsolete, such as using Redux core instead of Redux toolkit, and React class-based components, instead of funcion/hooks based. Also, this project doesn't reflect programming best practices I use on enterprise-level applications. The original project was created in 2019, and I made a re-upload in 2022 for updating critical dependencies + removing old code that relied on it.
+ This application has several some coding pieces that are considered obsolete, such as using Redux core instead of Redux toolkit, and React class-based components, instead of funcion/hooks based. Also, this project doesn't reflect programming best practices I use on enterprise-level applications. The original project was created in 2019, and I made a re-upload in 2022 for updating critical code updates.
 
 
 
