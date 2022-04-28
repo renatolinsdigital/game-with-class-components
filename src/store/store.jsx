@@ -10,9 +10,7 @@ const initialState = {
     playing: false,
     isAboutModalVisible: false
   },
-  message: {
-    messageTextOrHtml: ""
-  },
+  messages: [],
   dweebs: dweebs
 };
 
@@ -41,27 +39,27 @@ function gameStateReducer(state = initialState, action) {
   }
 }
 
-function messageReducer(state = initialState, action) {
+function messagesReducer(state = initialState, action) {
   switch (action.type) {
-    case "NO_MESSAGE":
+    case "NO_MESSAGES":
       return {
         ...state,
-        messageTextOrHtml: ""
+        messages: []
       };
     case "GAME_STARTED_MESSAGE":
       return {
         ...state,
-        messageTextOrHtml: "Game Started"
+        messages: ["Game Started"]
       };
     case "DWEEB_UPDATED_MESSAGE":
       return {
         ...state,
-        messageTextOrHtml: "Dweeb has been updated"
+        messages: ["Dweeb has been updated"]
       };
-    case "CUSTOM_MESSAGE":
+    case "CUSTOM_MESSAGES":
       return {
         ...state,
-        messageTextOrHtml: action.messageTextOrHtml
+        messages: action.messages
       };
     default:
       return {
@@ -108,7 +106,7 @@ const middleware = [thunk];
 
 const rootReducer = combineReducers({
   gameState: gameStateReducer,
-  message: messageReducer,
+  messages: messagesReducer,
   dweebs: dweebReducer
 });
 

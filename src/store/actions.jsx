@@ -1,6 +1,6 @@
 import store from "../store/store";
 import {
-  CUSTOM_MESSAGE,
+  CUSTOM_MESSAGES,
   NOT_PLAYING,
   UPDATE_DWEEBS
 } from "../store/actionTypes";
@@ -10,8 +10,8 @@ export const gameStateUpdate = action => dispatch => {
   dispatch(action);
 };
 
-export const messageUpdate = messageKey => dispatch => {
-  dispatch(messageKey);
+export const messagesUpdate = messages => dispatch => {
+  dispatch(messages);
 };
 
 export const dweebUpdate = (action, dweeb) => dispatch => {
@@ -34,16 +34,16 @@ export const fight = (action, dweebs) => async dispatch => {
   const dweeb1 = dweebsAfterAction[0];
   const dweeb2 = dweebsAfterAction[1];
 
-  let actionTextElement = `Dweeb 1 damage: ${dweeb1.lastHit}<br> ------ <br>Dweeb 2 damage: ${dweeb2.lastHit}`;
+  let gameMessages = [`Dweeb 1 damage: ${dweeb1.lastHit}`,  `Dweeb 2 damage: ${dweeb2.lastHit}`];
 
   if (dweeb1.life === 0 || dweeb2.life === 0) {
     store.dispatch(NOT_PLAYING);
-    actionTextElement +=
+    gameMessages.push(
       dweeb1.life > dweeb2.life
-        ? `<br>------<br>Dweeb 1 Won`
+        ? `Dweeb 1 Won`
         : dweeb2.life > dweeb1.life
-        ? `<br>------<br>Dweeb 2 Won`
-        : `<br>------<br>Draw`;
+        ? `Dweeb 2 Won`
+        : `Draw`);
   }
 
   dweebsAfterAction = dweebsAfterAction.map(dweeb => {
@@ -58,7 +58,7 @@ export const fight = (action, dweebs) => async dispatch => {
   }, 70);
 
   store.dispatch({
-    type: CUSTOM_MESSAGE.type,
-    messageTextOrHtml: actionTextElement
+    type: CUSTOM_MESSAGES.type,
+    messages: gameMessages
   });
 };

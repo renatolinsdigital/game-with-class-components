@@ -1,36 +1,30 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { messageUpdate } from "../store/actions";
-import { NO_MESSAGE } from "../store/actionTypes";
+import { messagesUpdate } from "../store/actions";
+import { NO_MESSAGES } from "../store/actionTypes";
 
 class GameMessages extends Component {
   componentDidMount() {
-    this.props.messageUpdate(NO_MESSAGE);
+    this.props.messagesUpdate(NO_MESSAGES);
   }
 
   render() {
+    const { messages } = this.props.messages;
     return (
-      <span style={this.getMessageStyle()}>
-        {this.props.messageTextOrHtml}
-      </span>
+      <>
+        {messages.map((message, index) => <p key={index} className='message-entry'>{message}</p>)}
+      </>
     );
-  }
-
-  getMessageStyle() {
-    return {
-      textAlign: "center",
-      fontSize: "calc( 14px + 1vw )"
-    };
   }
 }
 
 GameMessages.prototypes = {
-  messageTextOrHtml: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+  messages: PropTypes.arrayOf(PropTypes.string),
 };
 
 const mapStateToProps = state => ({
-  messageTextOrHtml: state.message.messageTextOrHtml
+  messages: state.messages
 });
 
-export default connect(mapStateToProps, { messageUpdate })(GameMessages);
+export default connect(mapStateToProps, { messagesUpdate })(GameMessages);

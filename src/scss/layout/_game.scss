@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.message-entry {
+  font-size: 2.2rem;
+}
+
 .dweeb-container {
   border-radius: 8px;
   overflow: hidden;
@@ -76,18 +80,6 @@
     &:hover {
       color: $white;
       background: lighten($wine, 8%);
-    }
-  }
-
-  .message {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    span {
-      &:last-of-type {
-        margin-bottom: 30px;
-      }
     }
   }
 }

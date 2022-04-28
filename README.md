@@ -1,6 +1,6 @@
 # Dweeb Fight
 
- Fighting mini-game with open character's attributes. [Click here](https://dweeb-fight.herokuapp.com) to see the app running.
+ Fighting mini-game with open character's attributes. [Click here](https://game-with-class-components.netlify.app) to see the app running.
 
  App print:
 
@@ -15,7 +15,7 @@ Simply run:
 
 # Playing
 
-This game basically puts two characters into a fight, and the fight will be based on their level + attributes. You are free for changing attributes and see what happens. 
+This game basically puts two characters into a fight, and the fight will be based on their level + attributes. You are free for changing attributes to see what happens. 
 
 # About this app
 

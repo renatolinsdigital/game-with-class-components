@@ -11,7 +11,7 @@ class Footer extends Component {
           <a href="./" title="Dweeb Fight" className="logo">
             <img src={logoImage} alt="Dweeb Fight Logo" />
           </a>
-          <span className="version">v 1.1</span>
+          <span className="version">v 1.1.1</span>
           <button
             className="about-button"
             onClick={() =>

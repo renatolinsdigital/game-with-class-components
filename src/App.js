@@ -7,7 +7,7 @@ import AttributeSelect from "./components/attributeSelect";
 import availableAttributes from "./configs/availableAttributes";
 import GameMessages from "./components/gameMessages";
 import DweebLife from "./components/dweebLife";
-import { messageUpdate, dweebUpdate, fight } from "./store/actions";
+import { messagesUpdate, dweebUpdate, fight } from "./store/actions";
 import { connect } from "react-redux";
 import gameStart from "./game-logic/gameStart";
 import AboutModal from "./components/aboutModal";
@@ -118,6 +118,6 @@ const mapStateToProps = state => ({
   dweebs: _.values(state.dweebs)
 });
 
-export default connect(mapStateToProps, { messageUpdate, dweebUpdate, fight })(
+export default connect(mapStateToProps, { messagesUpdate, dweebUpdate, fight })(
   App
 );

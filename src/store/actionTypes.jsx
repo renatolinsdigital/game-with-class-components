@@ -1,6 +1,6 @@
-// Messages
-export const NO_MESSAGE = { type: "NO_MESSAGE" };
-export const CUSTOM_MESSAGE = { type: "CUSTOM_MESSAGE" };
+// Pre-defined messages
+export const NO_MESSAGES = { type: "NO_MESSAGES" };
+export const CUSTOM_MESSAGES = { type: "CUSTOM_MESSAGES" };
 export const GAME_STARTED_MESSAGE = { type: "GAME_STARTED_MESSAGE" };
 export const DWEEB_UPDATED_MESSAGE = { type: "DWEEB_UPDATED_MESSAGE" };
 
